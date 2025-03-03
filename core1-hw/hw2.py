@@ -16,8 +16,8 @@ def extract_numbers(text):
             if item.isdigit():
                 util_str += item
         if util_str!= '':
-            z = int(util_str)
+            z = util_str
             nums.append(z)
-    print(nums)
+    print(', '.join(nums))
 
 extract_numbers(st)

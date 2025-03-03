@@ -10,8 +10,7 @@ def extract_numbers(st):
     clearLi = list()
     for i in dirtyLi:
         if i.isdecimal():
-            clearLi.append(int(i))
+            clearLi.append(i)
     return clearLi
 
-print(extract_numbers(st))
-
+print(', '.join(extract_numbers(st)))
