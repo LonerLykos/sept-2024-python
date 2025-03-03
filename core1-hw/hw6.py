@@ -17,7 +17,8 @@ def replace_fourth(lst):
 
 print(replace_fourth(list1))
 # 2) вивести на екран пустий квадрат з "*" сторона якого вказана як агрумент функції
-def print_square(side):
+def print_square(side:int):
+
     if side == 0:
         print('Invalid input. Side length must be a positive integer.')
         return
@@ -63,8 +64,12 @@ while True:
     elif a == 3:
         replace_fourth(list)
     elif a == 4:
-        b = int(input('введіть сторону квадрата: '))
-        print_square(b)
+        b = (input('введіть сторону квадрата: '))
+        if not b.isdigit():
+            print('Невірно введений вхідний параметр.\n')
+            continue
+        elif int(b):
+            print_square(int(b))
     elif a == 5:
         multi_table()
     elif a == 6:
